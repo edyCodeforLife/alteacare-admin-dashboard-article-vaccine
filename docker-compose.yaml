@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    image: alteacare/admin-article
+    container_name: alteacare-admin-article
+    ports:
+      - 8888:3000
+    command: npm start
